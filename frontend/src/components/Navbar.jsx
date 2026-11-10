@@ -19,6 +19,8 @@ export const Navbar = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const navigate = useNavigate();
 
+  const isUserLoggedIn = Boolean(isAuthenticated && user);
+
   const handleLogout = () => {
     logout();
     navigate('/login');
@@ -26,8 +28,8 @@ export const Navbar = () => {
 
   const getDashboardLink = () => {
     if (!user) return '/login';
-    if (user.role === 'admin') return '/admin';
-    if (user.role === 'manager') return '/manager';
+    if (user?.role === 'admin') return '/admin';
+    if (user?.role === 'manager') return '/manager';
     return '/customer';
   };
 
@@ -66,7 +68,7 @@ export const Navbar = () => {
 
           {/* Desktop Auth Section */}
           <div className="hidden md:flex items-center gap-4">
-            {isAuthenticated ? (
+            {isUserLoggedIn ? (
               <div className="flex items-center gap-3">
                 <Link
                   to={getDashboardLink()}
@@ -76,20 +78,22 @@ export const Navbar = () => {
                   <span>Dashboard</span>
                   <span
                     className={`text-[10px] uppercase font-bold px-2 py-0.5 rounded-full ${
-                      user.role === 'admin'
+                      user?.role === 'admin'
                         ? 'bg-purple-500/20 text-purple-300 border border-purple-500/30'
-                        : user.role === 'manager'
+                        : user?.role === 'manager'
                         ? 'bg-amber-500/20 text-amber-300 border border-amber-500/30'
                         : 'bg-emerald-500/20 text-emerald-300 border border-emerald-500/30'
                     }`}
                   >
-                    {user.role}
+                    {user?.role || 'Customer'}
                   </span>
                 </Link>
 
                 <div className="text-right">
-                  <p className="text-xs font-semibold text-slate-200">{user.full_name?.split(' ')[0]}</p>
-                  <p className="text-[10px] text-slate-400 truncate max-w-[120px]">{user.email}</p>
+                  <p className="text-xs font-semibold text-slate-200">
+                    {user?.full_name ? user.full_name.split(' ')[0] : (user?.email || 'User')}
+                  </p>
+                  <p className="text-[10px] text-slate-400 truncate max-w-[120px]">{user?.email || ''}</p>
                 </div>
 
                 <button
@@ -155,7 +159,7 @@ export const Navbar = () => {
             Multi-DB Architecture
           </a>
 
-          {isAuthenticated ? (
+          {isUserLoggedIn ? (
             <div className="pt-2 border-t border-slate-800 space-y-2">
               <Link
                 to={getDashboardLink()}
@@ -163,7 +167,7 @@ export const Navbar = () => {
                 className="flex items-center gap-2 py-2 text-blue-400 font-medium"
               >
                 <LayoutDashboard size={18} />
-                <span>Go to Dashboard ({user.role})</span>
+                <span>Go to Dashboard ({user?.role || 'Customer'})</span>
               </Link>
               <button
                 onClick={() => {
