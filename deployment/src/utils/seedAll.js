@@ -216,7 +216,7 @@ export const seedDatabase = async () => {
       transmission: 'Manual',
       seating_capacity: 5,
       rental_price_per_day: 1600.00,
-      image_url: 'https://images.unsplash.com/photo-1590362891988-f77804702088?auto=format&fit=crop&w=1200&q=80',
+      image_url: 'https://images.unsplash.com/photo-1541899481282-d53bffe3c35d?auto=format&fit=crop&w=1200&q=80',
       availability_status: 'Available',
       mileage: '24.8 km/l',
       description: 'Zippy city hatchback with outstanding fuel economy, touchscreen infotainment, push button start, and cruise control.',

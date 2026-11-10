@@ -10,10 +10,14 @@ export const VehicleCard = ({ vehicle }) => {
       {/* Image Container with Badges */}
       <div className="relative aspect-[16/10] bg-slate-100 overflow-hidden">
         <img
-          src={vehicle.image_url || 'https://images.unsplash.com/photo-1549399542-7e3f8b79c341?auto=format&fit=crop&w=800&q=80'}
+          src={vehicle.image_url || 'https://images.unsplash.com/photo-1541899481282-d53bffe3c35d?auto=format&fit=crop&w=800&q=80'}
           alt={`${vehicle.brand} ${vehicle.model}`}
           className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
           loading="lazy"
+          onError={(e) => {
+            e.target.onerror = null;
+            e.target.src = 'https://images.unsplash.com/photo-1541899481282-d53bffe3c35d?auto=format&fit=crop&w=800&q=80';
+          }}
         />
 
         {/* Category Pill */}

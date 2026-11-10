@@ -94,9 +94,13 @@ export const VehicleDetailPage = () => {
         <div className="lg:col-span-2 space-y-6">
           <div className="relative aspect-[16/9] rounded-3xl overflow-hidden bg-slate-900 shadow-lg">
             <img
-              src={vehicle.image_url}
+              src={vehicle.image_url || 'https://images.unsplash.com/photo-1541899481282-d53bffe3c35d?auto=format&fit=crop&w=1200&q=80'}
               alt={`${vehicle.brand} ${vehicle.model}`}
               className="w-full h-full object-cover"
+              onError={(e) => {
+                e.target.onerror = null;
+                e.target.src = 'https://images.unsplash.com/photo-1541899481282-d53bffe3c35d?auto=format&fit=crop&w=1200&q=80';
+              }}
             />
             <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent"></div>
             <div className="absolute bottom-6 left-6 text-white">
