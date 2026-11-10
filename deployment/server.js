@@ -35,10 +35,13 @@ const __dirname = path.dirname(__filename);
 const app = express();
 const PORT = process.env.PORT || 5000;
 
-// Security Middlewares
+// Security Middlewares - Relaxed for single-domain React SPA delivery
 app.use(
   helmet({
-    contentSecurityPolicy: false, // Allows inline scripts for frontend React SPA
+    contentSecurityPolicy: false,
+    crossOriginResourcePolicy: false,
+    crossOriginEmbedderPolicy: false,
+    crossOriginOpenerPolicy: false,
   })
 );
 app.use(cors());
