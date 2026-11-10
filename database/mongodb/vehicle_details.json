@@ -1,0 +1,91 @@
+[
+  {
+    "vehicle_id": 1,
+    "registration_number": "KA-01-MJ-2024",
+    "specifications": {
+      "engine": "1.5L U2 CRDi Diesel",
+      "power": "115 PS @ 4000 rpm",
+      "torque": "250 Nm @ 1500-2750 rpm",
+      "boot_capacity": "433 Litres",
+      "infotainment": "10.25-inch Touchscreen with Android Auto & Apple CarPlay"
+    },
+    "features": [
+      "Voice Controlled Panoramic Sunroof",
+      "Ventilated Front Seats",
+      "Wireless Phone Charger",
+      "Level 2 ADAS Safety Suite",
+      "Rear AC Vents"
+    ],
+    "accessories_included": [
+      "Emergency First-Aid Kit",
+      "Fastag Pre-installed",
+      "Front Dashcam",
+      "Mobile Mount"
+    ]
+  },
+  {
+    "vehicle_id": 2,
+    "registration_number": "KA-04-EV-9021",
+    "specifications": {
+      "battery_capacity": "40.5 kWh High Energy Density LFP",
+      "motor_type": "Permanent Magnet Synchronous Motor",
+      "power": "142.6 bhp",
+      "torque": "215 Nm",
+      "charging_time": "56 mins (10% to 80% on 50kW DC fast charger)"
+    },
+    "features": [
+      "Electronic Parking Brake with Auto Hold",
+      "Vehicle-to-Vehicle (V2V) Charging",
+      "Harman Cinematic Audio",
+      "Regenerative Paddle Shifters"
+    ],
+    "accessories_included": [
+      "Portable 3.3 kW Home Charging Cable",
+      "Fastag Pre-installed",
+      "Tyre Inflator Kit"
+    ]
+  },
+  {
+    "vehicle_id": 3,
+    "registration_number": "KA-05-TH-4444",
+    "specifications": {
+      "engine": "2.2L mHawk 130 Diesel",
+      "drivetrain": "Shift-on-the-Fly 4WD with Mechanical Locking Differential",
+      "power": "130 bhp @ 3750 rpm",
+      "torque": "300 Nm @ 1600-2800 rpm",
+      "water_wading": "650 mm Water Wading Depth"
+    },
+    "features": [
+      "Moulded Hard Top with Roll Cage",
+      "Adventure Statistics Dashboard",
+      "Washable Interior with Drain Plugs",
+      "All-Terrain Tires"
+    ],
+    "accessories_included": [
+      "Heavy-duty Tow Strap",
+      "Fastag Pre-installed",
+      "Off-road High-Lift Jack Point"
+    ]
+  },
+  {
+    "vehicle_id": 4,
+    "registration_number": "KA-01-CR-8899",
+    "specifications": {
+      "engine": "2.4L 2GD-FTV Diesel",
+      "power": "150 PS @ 3400 rpm",
+      "torque": "360 Nm @ 1400-2600 rpm",
+      "seating": "Captain Seats with Armrests (7 Seater)"
+    },
+    "features": [
+      "Automatic Climate Control (Dual Zone)",
+      "Ambient Lighting",
+      "One-touch Tumble 2nd Row Seats",
+      "Eco & Power Drive Modes"
+    ],
+    "accessories_included": [
+      "Fastag Pre-installed",
+      "Puncture Repair Kit",
+      "Luggage Carrier Net"
+    ]
+  }
+]

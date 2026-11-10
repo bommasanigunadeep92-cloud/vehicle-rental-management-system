@@ -1,0 +1,43 @@
+[
+  {
+    "user_id": 3,
+    "user_email": "rahul.sharma@example.com",
+    "action": "USER_LOGIN",
+    "ip_address": "127.0.0.1",
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64)",
+    "timestamp": { "$date": "2026-11-10T14:00:00.000Z" },
+    "metadata": { "role": "customer", "method": "JWT_BCRYPT" }
+  },
+  {
+    "user_id": 3,
+    "user_email": "rahul.sharma@example.com",
+    "action": "VEHICLE_SEARCH",
+    "timestamp": { "$date": "2026-11-10T14:05:00.000Z" },
+    "metadata": { "category": "Compact SUV", "city": "Bangalore", "fuel": "Petrol" }
+  },
+  {
+    "user_id": 3,
+    "user_email": "rahul.sharma@example.com",
+    "action": "BOOKING_CREATED",
+    "booking_reference": "BK-2026-00101",
+    "vehicle_id": 1,
+    "total_amount": 8400.0,
+    "timestamp": { "$date": "2026-11-10T14:10:00.000Z" }
+  },
+  {
+    "user_id": 4,
+    "user_email": "priya.patel@example.com",
+    "action": "USER_LOGIN",
+    "ip_address": "127.0.0.1",
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64)",
+    "timestamp": { "$date": "2026-11-10T14:15:00.000Z" },
+    "metadata": { "role": "customer" }
+  },
+  {
+    "user_id": 4,
+    "user_email": "priya.patel@example.com",
+    "action": "VEHICLE_SEARCH",
+    "timestamp": { "$date": "2026-11-10T14:20:00.000Z" },
+    "metadata": { "category": "Electric Vehicle (EV)", "city": "Bangalore" }
+  }
+]
